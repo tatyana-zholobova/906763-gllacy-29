@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Татьяна](https://up.htmlacademy.ru/htmlcss/29/user/906763).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
