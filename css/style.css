@@ -13,7 +13,8 @@
   --nav-item-hover: #FBDED7;
   --nav-item-active: #F6B5A5;
   --nav-item-current:#D07058;
-  --main-menu-hover: #EDEDED;
+  --main-menu-hover-bg: #EDEDED;
+  --main-menu-hover-shadow: #696969;
 
   --link-normal-underline: rgba(255, 255, 255, 0.3);
   --link-hover:#FFBC9E;
@@ -29,3 +30,128 @@
   --button-hover-shadow: #AC1000;
   --button-active-shadow:#942718;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: var(--basic-white);
+  background-color: var(--background-1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-navigation__list {
+  list-style: none;
+}
+
+.site-navigation__link {
+  color: var(--basic-white);
+  font-weight: bold;
+  line-height: 18px;
+  text-decoration-color: var(--semitransparent-white);
+}
+
+.site-navigation__link:hover {
+  color: var(--black-text);
+  background-color: var(--basic-white);
+  text-decoration: none;
+}
+
+.site-navigation__link:active {
+  background-color: var(--main-menu-hover-bg);
+  box-shadow: inset 0px 2px 1px var(--main-menu-hover-shadow);
+}
+
+.submenu {
+  background-color: var(--basic-white);
+}
+
+.submenu__link {
+  color: var(--black-text);
+  text-decoration: none;
+}
+
+.submenu__link--new-goods {
+  font-weight: bold;
+}
+
+.submenu__link:hover {
+  background-color: var(--nav-item-hover);
+}
+
+.submenu__link:active {
+  background-color: var(--nav-item-active);
+}
+
+.submenu__link--current {
+  color: var(--basic-white);
+  background-color: var(--nav-item-current);
+}
+
+.user-navigation__search-button {
+  background-color: var(--semitransparent-white);
+  border: none;
+  /* Временно */
+  width: 32px;
+  height: 32px;
+}
+
+.user-navigation__search-button:hover {
+  background-color: var(--basic-white);
+}
+
+.user-navigation__list {
+  list-style: none;
+}
+
+.user-navigation__link {
+  color: var(--basic-white);
+  background-color: var(--semitransparent-white);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.user-navigation__link:hover,
+.user-navigation__link:active {
+  color: var(--dark-text);
+  background-color: var(--basic-white);
+}
+
+.contacts__working-time {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.contacts__telephone {
+  text-decoration: none;
+  color: var(--basic-white);
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+}
+
