@@ -4,6 +4,8 @@
   --background-3: #9D8B84;
   --semitransparent-white: rgba(255, 255, 255, 0.2);
   --backgrpond-modal:#F8F7F4;
+  --background-chocolate: #57321E;
+  --background-raspberry: #850015;
 
   --basic-white: #FFFFFF;
   --black-text: #323232;
@@ -186,4 +188,34 @@ img {
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
+}
+
+.banners__list {
+  list-style: none;
+}
+
+.banner__title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.banner__text {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.banner--raspberry {
+  background-color: var(--background-raspberry);
+}
+
+.banner--chocolate {
+  background-color: var(--background-chocolate);
+}
+
+.banner__link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
 }
