@@ -6,6 +6,7 @@
   --backgrpond-modal:#F8F7F4;
   --background-chocolate: #57321E;
   --background-raspberry: #850015;
+  --background-waffle:#EFE4CE;
 
   --basic-white: #FFFFFF;
   --black-text: #323232;
@@ -237,18 +238,21 @@ img {
   line-height: 35px;
 }
 
-.product-card__link {
+.link {
   color: var(--basic-white);
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
   text-decoration-color: var(--link-normal-underline);
 }
 
-.product-card__link:hover,
-.product-card__link:active {
+.link:hover,
+.link:active {
   color: var(--link-hover);
   text-decoration-color: var(--link-hover-underline);
+}
+
+.product-card__link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
 }
 
 .product-card__quick-view {
@@ -256,3 +260,19 @@ img {
   font-size: 18px;
   line-height: 24px;
 }
+
+.advantages {
+  color: var(--black-text);
+  background-color: var(--background-waffle)
+}
+
+.advantages__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
