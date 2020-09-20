@@ -7,12 +7,14 @@
   --background-chocolate: #57321E;
   --background-raspberry: #850015;
   --background-waffle:#EFE4CE;
+  --background-contact-info:#FEFEFE;
 
   --basic-white: #FFFFFF;
   --black-text: #323232;
   --dark-text: #5A5A5A;
   --placeholder-color:#999999;
-  --text-shadow: rgba(49, 50, 53, 0.5);
+  --text-shadow-price: rgba(49, 50, 53, 0.5);
+  --text-shadow-button: rgba(160, 32, 11, 0.76);
 
   --nav-item-hover: #FBDED7;
   --nav-item-active: #F6B5A5;
@@ -173,6 +175,7 @@ img {
   background: var(--button-normal-bg);
   box-shadow: 0px 2px 2px var(--button-normal-shadow);
   text-decoration: none;
+  border: none;
 }
 
 .button:hover {
@@ -189,6 +192,7 @@ img {
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
+  text-shadow: 0px 2px 5px var(--text-shadow-button);
 }
 
 .banners__list {
@@ -229,7 +233,7 @@ img {
   font-weight: bold;
   font-size: 45px;
   line-height: 45px;
-  text-shadow: 0px 1px 3px var(--text-shadow);
+  text-shadow: 0px 1px 3px var(--text-shadow-price);
 }
 
 .product-card__units {
@@ -304,3 +308,37 @@ img {
   color: var(--dark-text);
   background-color: var(--background-modal);
 }
+
+.contact-info {
+  color: var(--black-text);
+  background-color: var(--background-contact-info);
+}
+
+.contact-info__text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contact-info__address,
+.contact-info__telephone {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contact-info__address {
+  font-style: normal;
+}
+
+.contact-info__telephone {
+  color: var(--black-text);
+  text-decoration: none;
+}
+
+.contact-info__button {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-shadow: 0px 2px 5px var(--text-shadow-button);
+}
+
