@@ -3,7 +3,7 @@
   --background-2: #8996A6;
   --background-3: #9D8B84;
   --semitransparent-white: rgba(255, 255, 255, 0.2);
-  --backgrpond-modal:#F8F7F4;
+  --background-modal:#F8F7F4;
   --background-chocolate: #57321E;
   --background-raspberry: #850015;
   --background-waffle:#EFE4CE;
@@ -25,7 +25,7 @@
   --link-hover-underline:rgba(255, 188, 158, 0.3);
   --dark-link-underline: rgba(50, 50, 50, 0.3);
   --dark-link-hover: #E84D37;
-  --dark-link-underline: rgba(232, 77, 55, 0.3);
+  --dark-link-hover-underline: rgba(232, 77, 55, 0.3);
 
   --button-normal-bg: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --button-hover-bg: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
@@ -43,7 +43,6 @@
   padding: 0;
   border: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -276,3 +275,32 @@ img {
   list-style: none;
 }
 
+.article {
+  color: var(--black-text);
+  background-color: var(--basic-white);
+}
+
+.article__header {
+  font-weight: 500;
+}
+
+.article__link {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+.link--dark {
+  color: var(--black-text);
+  text-decoration-color: var(--dark-link-underline);
+}
+
+.link--dark:hover,
+.link--dark:active {
+  color: var(--dark-link-hover);
+  text-decoration-color: var(--dark-link-hover-underline);
+}
+
+.subscription {
+  color: var(--dark-text);
+  background-color: var(--background-modal);
+}
