@@ -78,6 +78,11 @@ img {
   text-decoration-color: var(--semitransparent-white);
 }
 
+.site-navigation__link--current {
+  background-color: var(--nav-item-current);
+  text-decoration: none;
+}
+
 .site-navigation__link:hover {
   color: var(--black-text);
   background-color: var(--basic-white);
@@ -96,10 +101,13 @@ img {
 .submenu__link {
   color: var(--black-text);
   text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .submenu__link--new-goods {
   font-weight: bold;
+  line-height: 18px;
 }
 
 .submenu__link:hover {
