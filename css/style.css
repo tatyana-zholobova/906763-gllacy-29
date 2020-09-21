@@ -155,7 +155,7 @@ img {
 
 .user-navigation__link:hover,
 .user-navigation__link:active {
-  color: var(--dark-text);
+  color: var(--black-text);
   background-color: var(--basic-white);
 }
 
