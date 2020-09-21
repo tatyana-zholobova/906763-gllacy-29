@@ -62,7 +62,7 @@
     </nav>
     <div class="main-header__contacts contacts">
       <p class="contacts__working-time">с 10 до 20, ежедневно</p>
-      <a class="contacts__telephone" href="tel:+78124502525">8 812 450-25-25</a>
+      <a class="contacts__telephone link" href="tel:+78124502525">8 812 450-25-25</a>
     </div>
   </header>
   <main>
@@ -206,12 +206,14 @@
     <section class="contact-info">
       <h2 class="visually-hidden">Контактная информация</h2>
       <img src="https://via.placeholder.com/1200x430" alt="" width="1200" height="430">
-      <p class="contact-info__text">Адрес главного офиса и офлайн-магазина:</p>
-      <address class="contact-info__address">ул. Большая Конюшенная, 19/8, Санкт-Петербург</address>
-      <p class="contact-info__text">Для заказов по телефону:</p>
-      <a class="contact-info__telephone" href="tel:+78124502525">8 812 450-25-25</a>
-      <p class="contact-info__text">(с 10 до 20 ежедневно)</p>
-      <button class="contact-info__button button" type="button">Форма обратной связи</button>
+      <div class="contact-info__text-wrapper">
+        <p class="contact-info__text">Адрес главного офиса и офлайн-магазина:</p>
+        <address class="contact-info__address">ул. Большая Конюшенная, 19/8, Санкт-Петербург</address>
+        <p class="contact-info__text">Для заказов по телефону:</p>
+        <a class="contact-info__telephone link--dark" href="tel:+78124502525">8 812 450-25-25</a>
+        <p class="contact-info__text">(с 10 до 20 ежедневно)</p>
+        <button class="contact-info__button button" type="button">Форма обратной связи</button>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
@@ -242,16 +244,16 @@
     </section>
     <ul class="main-footer__nav-list">
       <li class="main-footer__nav-item">
-        <a class="main-footer__nav-link" href="#">Для поставщиков</a>
+        <a class="main-footer__nav-link main-footer__nav-link--provider link" href="#">Для поставщиков</a>
       </li>
       <li class="main-footer__nav-item">
-        <a class="main-footer__nav-link" href="#">Наши документы</a>
+        <a class="main-footer__nav-link link" href="#">Наши документы</a>
       </li>
       <li class="main-footer__nav-item">
-        <a class="main-footer__nav-link" href="#">О производстве</a>
+        <a class="main-footer__nav-link link" href="#">О производстве</a>
       </li>
       <li class="main-footer__nav-item">
-        <a class="main-footer__nav-link" href="#">Экологические стандарты</a>
+        <a class="main-footer__nav-link link" href="#">Экологические стандарты</a>
       </li>
     </ul>
     <div class="main-footer__copyright copyright">
@@ -259,7 +261,7 @@
         <img src="https://via.placeholder.com/108x39" alt="" width="108" height="39">
       </a>
       <p class="copyright__text">Сделано в
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+        <a class="copyright__link link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
       </p>
     </div>
   </footer>
