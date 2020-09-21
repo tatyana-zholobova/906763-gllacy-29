@@ -8,6 +8,7 @@
   --background-raspberry: #850015;
   --background-waffle:#EFE4CE;
   --background-contact-info:#FEFEFE;
+  --shadow-modal: rgba(0, 0, 0, 0.4);
 
   --basic-white: #FFFFFF;
   --basic-black: #000000;
@@ -418,3 +419,45 @@ img {
   line-height: 16px;
 }
 
+.breadcrumbs__list {
+  list-style: none;
+}
+
+.breadcrumbs__link {
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.pagination__list {
+  list-style: none;
+}
+
+.pagination__link {
+  color: var(--basic-white);
+  font-weight: 500;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.pagination__link:hover {
+  background-color: var(--semitransparent-white);
+}
+
+.pagination__link:active,
+.pagination__link--current,
+.pagination__link--current:hover,
+.pagination__link--current:active {
+  color: var(--black-text);
+  background-color: var(--basic-white);
+} 
