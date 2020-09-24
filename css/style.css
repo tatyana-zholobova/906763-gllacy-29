@@ -70,6 +70,23 @@ img {
   height: auto;
 }
 
+.page {
+  height: 100%;
+}
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
 .site-navigation__list {
   list-style: none;
 }
@@ -224,7 +241,16 @@ img {
 }
 
 .banners__list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
   list-style: none;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
 }
 
 .banner__title {
@@ -253,7 +279,15 @@ img {
   line-height: 24px;
 }
 
-.hits__list {
+.hits__list,
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 26px;
+  row-gap: 40px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
   list-style: none;
 }
 
@@ -294,7 +328,8 @@ img {
 
 .advantages {
   color: var(--black-text);
-  background-color: var(--background-waffle)
+  background-color: var(--background-waffle);
+  margin-bottom: 40px;
 }
 
 .advantages__title {
@@ -304,6 +339,9 @@ img {
 }
 
 .advantages__list {
+  row-gap: 12px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -370,6 +408,11 @@ img {
   text-shadow: 0px 2px 5px var(--text-shadow-button);
 }
 
+.contact-info__map {
+  display: block;
+  margin: 0 auto;
+}
+
 .main-footer__nav-link {
   font-size: 13px;
   line-height: 18px;
@@ -379,7 +422,7 @@ img {
   font-weight: bold;
 }
 
-.main-footer__nav-list {
+.main-footer__nav-list {  
   list-style: none;
 }
 
