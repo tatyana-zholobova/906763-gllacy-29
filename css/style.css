@@ -286,7 +286,7 @@ img {
 
 .slider__title {
   margin-top: -275px;
-  margin-bottom: 27px;
+  margin-bottom: 24px;
   padding: 0 237px;
   font-weight: bold;
   font-size: 60px;
@@ -333,11 +333,17 @@ img {
 
 .promo__link {
   display: inline-block;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 40px;
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
   text-shadow: 0px 2px 5px var(--text-shadow-button);
+  box-shadow: 0px 2px 2px var(--button-normal-shadow);
+  border-radius: 70px;
 }
 
 .slider__toggles {
@@ -372,6 +378,10 @@ img {
   column-gap: 26px;
 }
 
+.banner {
+  border-radius: 16px;
+}
+
 .banner__title {
   margin-top: 0;
   margin-bottom: 16px;
@@ -389,10 +399,14 @@ img {
 }
 
 .banner--raspberry {
+  background-image: url(../img/background-raspberry.jpg);
+  background-repeat: no-repeat;
   background-color: var(--background-raspberry);
 }
 
 .banner--chocolate {
+  background-image: url(../img/background-chocolate.jpg);
+  background-repeat: no-repeat;
   background-color: var(--background-chocolate);
 }
 
