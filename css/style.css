@@ -459,8 +459,6 @@ img {
   line-height: 35px;
 }
 
-
-
 .link {
   color: var(--basic-white);
   text-decoration-color: var(--link-normal-underline);
@@ -470,6 +468,15 @@ img {
 .link:active {
   color: var(--link-hover);
   text-decoration-color: var(--link-hover-underline);
+}
+
+.link__icon {
+  fill: var(--basic-white);;
+}
+
+.link:hover .link__icon,
+.link:active .link__icon {
+  fill: var(--link-hover);
 }
 
 .product-card__title {
@@ -661,8 +668,15 @@ img {
   line-height: 18px;
 }
 
+
 .main-footer__nav-link {
-  padding-left: 22px;
+  padding-left: 25px;
+}
+
+.main-footer__link-icon {
+  margin-bottom: -2px;
+  margin-left: -25px;
+  margin-right: 3px;
 }
 
 .main-footer__nav-link--provider {
