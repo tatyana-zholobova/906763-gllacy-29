@@ -444,6 +444,10 @@ img {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
 
@@ -484,6 +488,7 @@ img {
 
 .product-card__title {
   margin-bottom: 11px;
+  padding: 0 5px;
 }
 
 .product-card__link {
@@ -710,6 +715,7 @@ img {
 }
 
 .cart {
+  display: none;
   color: var(--black-text);
   background-color: var(--background-modal);
   font-size: 13px;
@@ -740,8 +746,28 @@ img {
   line-height: 16px;
 }
 
+.breadcrumbs {
+  margin-top: -30px;
+}
+
 .breadcrumbs__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.breadcrumbs__item {
+  padding-right: 14px;
+  margin-left: 8px;
+}
+
+.breadcrumbs__item:first-child {
+  margin-left: 0;
+}
+
+.breadcrumbs__item:last-child {
+  padding-right: 0;
 }
 
 .breadcrumbs__link {
@@ -751,6 +777,8 @@ img {
 }
 
 .main-title {
+  margin: 0;
+  margin-bottom: 26px;
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
@@ -760,15 +788,37 @@ img {
   list-style: none;
 }
 
+.pagination {
+  margin-top: 77px;
+  margin-bottom: 25px;
+}
+
 .pagination__list {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.pagination__item {
+  margin-left: 3px;
+  text-align: center;
+}
+
+.pagination__item:first-child {
+  margin-left: 0;
+}
+
 .pagination__link {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
   color: var(--basic-white);
   font-weight: 500;
-  line-height: 18px;
+  line-height: 26px;
   text-decoration: none;
+  border-radius: 50%;
 }
 
 .pagination__link:hover {
@@ -781,4 +831,24 @@ img {
 .pagination__link--current:active {
   color: var(--black-text);
   background-color: var(--basic-white);
+}
+
+.pagination__arrow {
+  fill: var(--basic-white);
+}
+
+.pagination__link:active .pagination__arrow {
+  fill: var(--basic-black);
+}
+
+.pagination__link--inactive:hover,
+.pagination__link--inactive:active {
+  background-color: transparent;
+}
+
+.pagination__link--inactive .pagination__arrow,
+.pagination__link--inactive:hover .pagination__arrow,
+.pagination__link--inactive:active .pagination__arrow {
+  fill: var(--basic-white);
+  opacity: 0.2;
 }
