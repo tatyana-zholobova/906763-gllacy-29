@@ -233,10 +233,6 @@ img {
   border-radius: 4px;
 }
 
-.modal__input::placeholder {
-  font-weight: bold;
-}
-
 .modal__input {
   color: var(--placeholder-color);
   border: 1px solid var(--border-input);
@@ -540,6 +536,21 @@ img {
   padding: 0;
   margin-bottom: 40px;
   list-style: none;
+}
+
+.hits__item {
+  position: relative;
+}
+
+.hits__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 61px;
+  height: 61px;
+  background-image: url(../img/hit.svg);
+  background-repeat: no-repeat;
 }
 
 .product-card__image {
