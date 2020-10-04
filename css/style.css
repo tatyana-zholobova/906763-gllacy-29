@@ -744,8 +744,6 @@ img {
   border-radius: inherit;
 }
 
-
-
 .subscription__text {
   margin-top: 0;
   margin-bottom: 39px;
@@ -770,6 +768,7 @@ img {
 }
 
 .contact-info {
+  position: relative;
   margin-top: 40px;
 }
 
@@ -778,7 +777,16 @@ img {
   margin: 0 auto;
 }
 
+.contact-info__container {
+  position: absolute;
+  left: 50%;
+  top: 62px;
+  width: 1146px;
+  margin-left: -573px;
+}
+
 .contact-info__text-wrapper {
+  margin-left: auto;
   padding: 30px 25px;
   width: 303px;
   box-sizing: border-box;
