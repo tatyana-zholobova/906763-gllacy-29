@@ -630,7 +630,7 @@ img {
   padding-left: 20px;
   color: var(--black-text);
   background-image: url(../img/pattern-wafer.jpg);
-  background-repeat: repeat
+  background-repeat: repeat;
   background-color: var(--background-waffle);
   border-radius: 16px;
 }
@@ -644,6 +644,7 @@ img {
 }
 
 .advantages__list {
+  column-gap: 32px;
   row-gap: 12px;
   margin: 0;
   padding: 0;
@@ -651,9 +652,39 @@ img {
 }
 
 .advantages__item {
+  position: relative;
   padding-top: 10px;
-  padding-left: 57px;
+  padding-left: 55px;
 }
+
+.advantages__item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--own-production::before {
+  background-image: url(../img/icon-icecream.svg);
+}
+
+.advantages__item--farms::before {
+  background-image: url(../img/icon-cow.svg);
+}
+
+.advantages__item--naturalness::before {
+  background-image: url(../img/icon-leaf.svg);
+}
+
+.advantages__item--temperature::before {
+  background-image: url(../img/icon-thermometer.svg);
+}
+
+
+
 
 .article {
   padding-top: 18px;
