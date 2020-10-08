@@ -92,7 +92,7 @@ img {
   color: var(--basic-white);
 }
 
-.page__body::before {
+.page__body--main::before {
   position: absolute;
   content: "";
   width: 716px;
@@ -722,7 +722,7 @@ img {
 }
 
 .link:hover .link__icon,
-.link:focus .link__icon
+.link:focus .link__icon,
 .link:active .link__icon {
   fill: var(--link-hover);
 }
