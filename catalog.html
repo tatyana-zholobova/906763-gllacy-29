@@ -188,7 +188,61 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
-        <!-- Форма с фильтрами -->
+        <form class="filters__form" action="https://echo.htmlacademy.ru/" method="get">
+          <label for="sorting">Сортировка:</label>
+          <select name="sorting" id="sorting">
+            <option value="polarity">по полулярности</option>
+            <option value="cheap-first">сначала недорогие</option>
+            <option value="expensive-first">сначала дорогие</option>
+            <option value="fat">по жирности</option>
+          </select>
+
+          <p>Выбор диапазона цен</p>
+
+          <fieldset>
+            <legend>Жирность:</legend>
+            <label>
+              <input type="radio" name="fat" value="0">
+              0%
+            </label>
+            <label>
+              <input type="radio" name="fat" value="from-0-to-10" checked>
+              до 10%
+            </label>
+            <label>
+              <input type="radio" name="fat" value="from-0-to-30">
+              до 30%
+            </label>
+            <label>
+              <input type="radio" name="fat" value="more-30">
+              выше 30%
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <label>
+              <input type="checkbox" name="additives" value="chocolate" checked>
+              шоколадные
+            </label>
+            <label>
+              <input type="checkbox" name="additives" value="sugar-powders" checked>
+              сахарные присыпки
+            </label>
+            <label>
+              <input type="checkbox" name="additives" value="fruits">
+              фрукты
+            </label>
+            <label>
+              <input type="checkbox" name="additives" value="syrups">
+              сиропы
+            </label>
+            <label>
+              <input type="checkbox" name="additives" value="jams">
+              джемы
+            </label>
+          </fieldset>
+          <button type="submit">Применить</button>
+        </form>
       </section>
 
       <section class="catalog">

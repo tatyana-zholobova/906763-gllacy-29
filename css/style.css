@@ -1191,7 +1191,7 @@ img {
 
 
 .cart {
-  display: block;
+  display: none;
   position: absolute;
   top: 32px;
   right: 0;
