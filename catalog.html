@@ -9,7 +9,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page__body page__body--green">
+<body class="page__body page__body--green page__body--inner">
   <header class="main-header">
     <div class="container">
       <nav class="main-header__nav">
@@ -47,17 +47,23 @@
           </ul>
         </div>
         <div class="main-header__user-navigation user-navigation">
-          <button class="user-navigation__search-button" type="button">
-            <svg class="user-navigation__search-icon" width="16" height="16" viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z">
-            </svg>
-            <span class="visually-hidden">Открыть форму поиска</span>
-          </button>
-          <!-- Форма поиска -->
+          <div class="user-navigation__search-wrapper">
+            <button class="user-navigation__search-button" type="button" aria-label="Открыть форму поиска">
+              <svg class="user-navigation__search-icon" width="16" height="16" viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z" />
+              </svg>
+            </button>
+            <form class="user-navigation__search-form modal" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="search">Введите поисковый запрос</label>
+              <input class="user-navigation__input modal__input modal__input" type="text" name="search" id="search"
+                placeholder="Крем-брюле">
+            </form>
+          </div>
+
           <ul class="user-navigation__list">
-            <li class="user-navigation__item">
+            <li class="user-navigation__item user-navigation__item--login">
               <a class="user-navigation__link user-navigation__link--login" href="#">
                 <svg class="user-navigation__icon" width="20" height="19" viewBox="0 0 20 19"
                   xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +73,28 @@
                 </svg>
                 Вход
               </a>
+              <form class="user-navigation__authorization-form authorization-form modal"
+                action="https://echo.htmlacademy.ru" method="POST">
+                <label class="visually-hidden" for="email">Введите ваш email</label>
+                <input class="modal__input authorization-form__input authorization-form__input--email" type="email"
+                  name="email" id="email" placeholder="email@example.com" required>
+                <label class="visually-hidden" for="password">Введите ваш пароль</label>
+                <input class="modal__input authorization-form__input authorization-form__input--password"
+                  type="password" name="password" id="password" placeholder="......" required>
+                <div class="authorization-form__container">
+                  <button class="authorization-form__button button" type="submit">Войти</button>
+                  <ul class="authorization-form__link-list">
+                    <li class="authorization-form__link-item">
+                      <a class="authorization-form__link link--dark" href="#">Забыли пароль?</a>
+                    </li>
+                    <li class="authorization-form__link-item">
+                      <a class="authorization-form__link link--dark" href="#">Новая регистрация</a>
+                    </li>
+                  </ul>
+                </div>
+              </form>
             </li>
+
             <li class="user-navigation__item">
               <a class="user-navigation__link user-navigation__link--filled-cart" href="#">
                 <svg class="user-navigation__icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
@@ -85,9 +112,9 @@
                 </svg>
                 2 товара
               </a>
-              <section class="cart">
+              <section class="cart modal">
                 <h2 class="visually-hidden">Товары в корзине</h2>
-                <table>
+                <table class="cart__table">
                   <tr class="cart__product">
                     <td class="cart__product-delete">
                       <button class="cart__product-button" type="button">
@@ -95,8 +122,8 @@
                       </button>
                     </td>
                     <td class="cart__product-preview">
-                      <img src="img/creamy_with_orange_jam_and_citrus_flakes.jpg" alt="Пломбир с апельсиновым джемом"
-                        width="33" height="33">
+                      <img class="cart__product-image" src="img/creamy_with_orange_jam_and_citrus_flakes.jpg"
+                        alt="Пломбир с апельсиновым джемом" width="33" height="33">
                     </td>
                     <td class="cart__product-name">
                       Пломбир с апельсиновым джемом
@@ -115,7 +142,7 @@
                       </button>
                     </td>
                     <td class="cart__product-preview">
-                      <img src="img/creamy_strawberry_with_white_chocolate_powder.jpg"
+                      <img class="cart__product-image" src="img/creamy_strawberry_with_white_chocolate_powder.jpg"
                         alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
                     </td>
                     <td class="cart__product-name">
@@ -400,7 +427,7 @@
 
     </footer>
   </div>
-
 </body>
+
 
 </html>

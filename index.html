@@ -9,7 +9,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page__body page__body--green page__body--main">
+<body class="page__body page__body--green page__body--main page__body--overlay">
   <header class="main-header">
     <div class="container">
       <nav class="main-header__nav">
@@ -339,6 +339,29 @@
       </div>
     </footer>
   </div>
+  <section class="feedback modal">
+    <h2 class="feedback__title">Мы обязательно вам ответим!</h2>
+    <form action="https://echo.htmlacademy.ru/" method="post">
+      <label for="feedback-name">
+        <span class="visually-hidden">Введите имя и фамилию</span>
+      </label>
+      <input class="feedback__input modal__input" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+      <label for="feedback-email">
+        <span class="visually-hidden">Введите Ваш e-mail</span>
+      </label>
+      <input class="feedback__input modal__input" type="text" name="email" id="feedback-email"
+        placeholder="email@example.com">
+      <label for="feedback-message">
+        <span class="visually-hidden">Введите Ваше сообщение</span>
+      </label>
+      <textarea class="feedback__message modal__input" name="message" id="feedback-message"
+        placeholder="В свободной форме"></textarea>
+      <p class="feedback__button-wrapper">
+        <button class="feedback__button button" type="submit">Отправить</button>
+      </p>
+    </form>
+    <button class="feedback__close" type="button" aria-label="Закрыыть окно"></button>
+  </section>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=0785bf92-f95a-4c78-93b6-26fff1c1c32b&lang=ru_RU">
   </script>
   <script src="js/script.js"></script>
