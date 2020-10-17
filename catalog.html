@@ -189,59 +189,75 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
         <form class="filters__form" action="https://echo.htmlacademy.ru/" method="get">
-          <label for="sorting">Сортировка:</label>
-          <select name="sorting" id="sorting">
-            <option value="polarity">по полулярности</option>
-            <option value="cheap-first">сначала недорогие</option>
-            <option value="expensive-first">сначала дорогие</option>
-            <option value="fat">по жирности</option>
-          </select>
+          <div class="filters__string">
+            <fieldset class="filters__fieldset filters__fieldset--sorting">
+              <legend class="filters__caption">Сортировка:</legend>
+              <select class="filters__select" name="sorting" id="sorting">
+                <option class="filters__select-option" value="polarity">по полулярности</option>
+                <option class="filters__select-option" value="cheap-first">сначала недорогие</option>
+                <option class="filters__select-option" value="expensive-first">сначала дорогие</option>
+                <option class="filters__select-option" value="fat">по жирности</option>
+              </select>
+            </fieldset>
+            <fieldset class="filters__fieldset">
+              <legend class="filters__caption">Цена: 100 ₽ – 500 ₽</legend>
+              <div class="filters__range">
+                <div class="filters__controls">
+                  <div class="filters__scale">
+                    <div class="filters__bar"></div>
+                  </div>
+                  <div class="filters__toggle filters__toggle--min" tabindex="0"></div>
+                  <div class="filters__toggle filters__toggle--max" tabindex="0"></div>
+                </div>
+              </div>
+            </fieldset>
 
-          <p>Выбор диапазона цен</p>
-
-          <fieldset>
-            <legend>Жирность:</legend>
-            <label>
-              <input type="radio" name="fat" value="0">
-              0%
-            </label>
-            <label>
-              <input type="radio" name="fat" value="from-0-to-10" checked>
-              до 10%
-            </label>
-            <label>
-              <input type="radio" name="fat" value="from-0-to-30">
-              до 30%
-            </label>
-            <label>
-              <input type="radio" name="fat" value="more-30">
-              выше 30%
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Наполнители:</legend>
-            <label>
-              <input type="checkbox" name="additives" value="chocolate" checked>
-              шоколадные
-            </label>
-            <label>
-              <input type="checkbox" name="additives" value="sugar-powders" checked>
-              сахарные присыпки
-            </label>
-            <label>
-              <input type="checkbox" name="additives" value="fruits">
-              фрукты
-            </label>
-            <label>
-              <input type="checkbox" name="additives" value="syrups">
-              сиропы
-            </label>
-            <label>
-              <input type="checkbox" name="additives" value="jams">
-              джемы
-            </label>
-          </fieldset>
-          <button type="submit">Применить</button>
+            <fieldset class="filters__fieldset">
+              <legend class="filters__caption">Жирность:</legend>
+              <label>
+                <input type="radio" name="fat" value="0">
+                0%
+              </label>
+              <label>
+                <input type="radio" name="fat" value="from-0-to-10" checked>
+                до 10%
+              </label>
+              <label>
+                <input type="radio" name="fat" value="from-0-to-30">
+                до 30%
+              </label>
+              <label>
+                <input type="radio" name="fat" value="more-30">
+                выше 30%
+              </label>
+            </fieldset>
+          </div>
+          <div class="filters__string">
+            <fieldset class="filters__fieldset">
+              <legend class="filters__caption">Наполнители:</legend>
+              <label>
+                <input type="checkbox" name="additives" value="chocolate" checked>
+                шоколадные
+              </label>
+              <label>
+                <input type="checkbox" name="additives" value="sugar-powders" checked>
+                сахарные присыпки
+              </label>
+              <label>
+                <input type="checkbox" name="additives" value="fruits">
+                фрукты
+              </label>
+              <label>
+                <input type="checkbox" name="additives" value="syrups">
+                сиропы
+              </label>
+              <label>
+                <input type="checkbox" name="additives" value="jams">
+                джемы
+              </label>
+            </fieldset>
+            <button type="submit">Применить</button>
+          </div>
         </form>
       </section>
 
