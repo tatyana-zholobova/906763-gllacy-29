@@ -198,6 +198,9 @@
                 <option class="filters__select-option" value="expensive-first">сначала дорогие</option>
                 <option class="filters__select-option" value="fat">по жирности</option>
               </select>
+              <svg class="filters__arrow" width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11" />
+              </svg>
             </fieldset>
             <fieldset class="filters__fieldset">
               <legend class="filters__caption">Цена: 100 ₽ – 500 ₽</legend>
@@ -214,50 +217,56 @@
 
             <fieldset class="filters__fieldset">
               <legend class="filters__caption">Жирность:</legend>
-              <label>
-                <input type="radio" name="fat" value="0">
-                0%
-              </label>
-              <label>
-                <input type="radio" name="fat" value="from-0-to-10" checked>
-                до 10%
-              </label>
-              <label>
-                <input type="radio" name="fat" value="from-0-to-30">
-                до 30%
-              </label>
-              <label>
-                <input type="radio" name="fat" value="more-30">
-                выше 30%
-              </label>
+              <div class="filters__container filters__container--fat">
+                <input class="visually-hidden filters__radio" type="radio" name="fat" value="0" id="0">
+                <label class="filters__label filters__label--fat" for="0">0%
+                </label>
+                <input class="visually-hidden filters__radio" type="radio" name="fat" value="from-0-to-10"
+                  id="from-0-to-10" checked>
+                <label class="filters__label filters__label--fat" for="from-0-to-10">до 10%
+                </label>
+                <input class=" visually-hidden filters__radio" type="radio" name="fat" value="from-0-to-30"
+                  id="from-0-to-30">
+                <label class="filters__label filters__label--fat" for="from-0-to-30">до 30%
+                </label>
+                <input class="visually-hidden filters__radio" type="radio" name="fat" value="more-30" id="more-30"">
+                <label class=" filters__label filters__label--fat" for="more-30"">выше 30%
+                </label>
+              </div>
             </fieldset>
           </div>
-          <div class="filters__string">
-            <fieldset class="filters__fieldset">
-              <legend class="filters__caption">Наполнители:</legend>
-              <label>
-                <input type="checkbox" name="additives" value="chocolate" checked>
-                шоколадные
-              </label>
-              <label>
-                <input type="checkbox" name="additives" value="sugar-powders" checked>
-                сахарные присыпки
-              </label>
-              <label>
-                <input type="checkbox" name="additives" value="fruits">
-                фрукты
-              </label>
-              <label>
-                <input type="checkbox" name="additives" value="syrups">
-                сиропы
-              </label>
-              <label>
-                <input type="checkbox" name="additives" value="jams">
-                джемы
-              </label>
-            </fieldset>
-            <button type="submit">Применить</button>
-          </div>
+          <div class=" filters__string">
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__caption">Наполнители:</legend>
+                  <div class="filters__container filters__container--additives">
+                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="chocolate"
+                      id="chocolate" checked>
+                    <label class="filters__label filters__label--additives" for="chocolate">
+                      шоколадные
+                    </label>
+                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives"
+                      value="sugar-powders" id="sugar-powders" checked>
+                    <label class="filters__label filters__label--additives" for="sugar-powders">
+                      сахарные присыпки
+                    </label>
+                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="fruits"
+                      id="fruits">
+                    <label class="filters__label filters__label--additives" for="fruits">
+                      фрукты
+                    </label>
+                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="syrups"
+                      id="syrups">
+                    <label class="filters__label filters__label--additives" for="syrups">сиропы
+                    </label>
+                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="jams"
+                      id="jams">
+                    <label class="filters__label filters__label--additives" for="jams">
+                      джемы
+                    </label>
+                  </div class="filters__label-wrapper">
+                </fieldset>
+                <button class="filters__button" type="button">Применить</button>
+              </div>
         </form>
       </section>
 
@@ -444,23 +453,19 @@
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="visually-hidden">Facebook</span>
+            <a class="socials__link socials__link--facebook" href="#" aria-label="Facebook">
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="visually-hidden">Вконтакте</span>
+            <a class="socials__link socials__link--vk" href="#" aria-label="Вконтакте">
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="visually-hidden">Instagram</span>
+            <a class="socials__link socials__link--instagram" href="#" aria-label="Instagram">
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="visually-hidden">Twitter</span>
+            <a class="socials__link socials__link--twitter" href="#" aria-label="Twitter">
             </a>
           </li>
         </ul>
@@ -494,7 +499,6 @@
           <a class="copyright__link link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
         </p>
       </div>
-
     </footer>
   </div>
 </body>
