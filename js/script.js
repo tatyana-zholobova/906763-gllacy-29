@@ -1,16 +1,19 @@
 const feedbackButton = document.querySelector(".contact-info__button");
 const feedbackPopup = document.querySelector(".feedback");
 const feedbackClose = feedbackPopup.querySelector(".feedback__close");
+const feedbackOverlay = document.querySelector(".page__body");
 
 
 feedbackButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.add("modal--show");
+  feedbackOverlay.classList.add("page__body--overlay");
 });
 
 feedbackClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.remove("modal--show");
+  feedbackOverlay.classList.remove("page__body--overlay");
 });
 
 
