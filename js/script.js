@@ -31,12 +31,16 @@ feedbackButton.addEventListener("click", function (evt) {
 feedbackClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.remove("modal--show");
+  feedbackPopup.classList.remove("modal--error");
   feedbackOverlay.classList.remove("page__body--overlay");
 });
 
 feedbackForm.addEventListener("submit", function (evt) {
   if (!feedbackName.value || !feedbackEmail.value || !feedbackMessage.value) {
     evt.preventDefault();
+    feedbackPopup.classList.remove("modal--error");
+    feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
+    feedbackPopup.classList.add("modal--error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("name", feedbackName.value);
@@ -50,6 +54,7 @@ window.addEventListener("keydown", function (evt) {
     if (feedbackPopup.classList.contains("modal--show")) {
       evt.preventDefault();
       feedbackPopup.classList.remove("modal--show");
+      feedbackPopup.classList.remove("modal--error");
       feedbackOverlay.classList.remove("page__body--overlay");
     }
   }
