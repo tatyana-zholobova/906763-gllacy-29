@@ -457,6 +457,10 @@ img {
   background-color: var(--basic-white);
 }
 
+.user-navigation__link--filled-cart:focus + .cart {
+  display: block;
+}
+
 .user-navigation__authorization-form {
   display: none;
   position: absolute;
@@ -1604,7 +1608,8 @@ img {
   cursor: pointer;
 }
 
-.filters__toggle:hover {
+.filters__toggle:hover,
+.filters__toggle:focus {
   transform: scale(1.1);
 }
 
@@ -1660,8 +1665,16 @@ img {
   background-repeat: no-repeat;
 }
 
+.filters__radio:focus + .filters__label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2pх;
+}
+
+
 .filters__radio:checked + .filters__label--fat::before {
   background-image: url(../img/radio-on.svg);
+  background-repeat: no-repeat;
 }
 
 .filters__label--fat:last-child {
@@ -1688,11 +1701,21 @@ img {
   background-repeat: no-repeat;
 }
 
+.filters__checkbox:focus + .filters__label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2pх;
+}
+
+
+
 .filters__checkbox:checked + .filters__label--additives::before {
   width: 24px;
   height: 20px;
   background-image: url(../img/checkbox-on.svg);
 }
+
+
 
 .filters__button {
   padding: 7px 29px;
