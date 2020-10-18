@@ -9,9 +9,16 @@ const feedbackForm = feedbackPopup.querySelector(".feedback__form");
 
 let isStorageSupport = true;
 const nameStorage = "";
+const emailStorage = "";
 
 try {
   nameStorage = localStorage.getItem("name");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+try {
+  emailStorage = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -21,9 +28,10 @@ feedbackButton.addEventListener("click", function (evt) {
   feedbackPopup.classList.add("modal--show");
   page.classList.add("page__body--overlay");
 
-  if (nameStorage) {
+  if (nameStorage && emailStorage) {
     feedbackName.value = nameStorage;
-    feedbackEmail.focus();
+    feedbackEmail.value = emailStorage;
+    feedbackMessage.focus();
   } else {
     feedbackName.focus();
   }
@@ -45,6 +53,7 @@ feedbackForm.addEventListener("submit", function (evt) {
   } else {
     if (isStorageSupport) {
       localStorage.setItem("name", feedbackName.value);
+      localStorage.setItem("email", feedbackEmail.value);
     }
   }
 });
@@ -59,22 +68,6 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-
-ymaps.ready(init);
-function init() {
-  var myMap = new ymaps.Map(document.querySelector(".contact-info__map"), {
-    center: [59.939342, 30.329353],
-    zoom: 16
-  });
-  var myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: './img/pin.svg',
-    iconImageSize: [80, 140],
-    iconImageOffset: [-40, -140]
-  });
-  myMap.geoObjects.add(myPlacemark);
-};
 
 const sliderItems = document.querySelectorAll(".slider__item");
 const sliderButtons = document.querySelectorAll(".slider__button");
@@ -118,3 +111,18 @@ sliderButtons[2].addEventListener("click", function (evt) {
   sliderButtons[0].classList.remove("slider__button--current");
   sliderButtons[1].classList.remove("slider__button--current");
 });
+
+ymaps.ready(init);
+function init() {
+  var myMap = new ymaps.Map(document.querySelector(".contact-info__map"), {
+    center: [59.939342, 30.329353],
+    zoom: 16
+  });
+  var myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: './img/pin.svg',
+    iconImageSize: [80, 140],
+    iconImageOffset: [-40, -140]
+  });
+  myMap.geoObjects.add(myPlacemark);
+};
