@@ -1330,6 +1330,7 @@ img {
 
 .breadcrumbs__list {
   display: flex;
+  max-width: 950px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1502,7 +1503,7 @@ img {
   content: "";
   width: 11px;
   height: 10px;
-  top: 35px;
+  bottom: 13px;
   right: 16px;
   z-index: 10;
   pointer-events: none;
