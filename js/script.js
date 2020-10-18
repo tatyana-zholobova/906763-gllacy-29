@@ -1,7 +1,7 @@
 const feedbackButton = document.querySelector(".contact-info__button");
 const feedbackPopup = document.querySelector(".feedback");
 const feedbackClose = feedbackPopup.querySelector(".feedback__close");
-const feedbackOverlay = document.querySelector(".page__body");
+const page = document.querySelector(".page__body");
 const feedbackName = feedbackPopup.querySelector(".feedback__input--name");
 const feedbackEmail = feedbackPopup.querySelector(".feedback__input--email");
 const feedbackMessage = feedbackPopup.querySelector(".feedback__message");
@@ -19,7 +19,8 @@ try {
 feedbackButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.add("modal--show");
-  feedbackOverlay.classList.add("page__body--overlay");
+  page.classList.add("page__body--overlay");
+
   if (nameStorage) {
     feedbackName.value = nameStorage;
     feedbackEmail.focus();
@@ -32,7 +33,7 @@ feedbackClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.remove("modal--show");
   feedbackPopup.classList.remove("modal--error");
-  feedbackOverlay.classList.remove("page__body--overlay");
+  page.classList.remove("page__body--overlay");
 });
 
 feedbackForm.addEventListener("submit", function (evt) {
@@ -48,14 +49,13 @@ feedbackForm.addEventListener("submit", function (evt) {
   }
 });
 
-
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (feedbackPopup.classList.contains("modal--show")) {
       evt.preventDefault();
       feedbackPopup.classList.remove("modal--show");
       feedbackPopup.classList.remove("modal--error");
-      feedbackOverlay.classList.remove("page__body--overlay");
+      page.classList.remove("page__body--overlay");
     }
   }
 });
