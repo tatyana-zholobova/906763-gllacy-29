@@ -1,3 +1,22 @@
+const feedbackButton = document.querySelector(".contact-info__button");
+const feedbackPopup = document.querySelector(".feedback");
+const feedbackClose = feedbackPopup.querySelector(".feedback__close");
+
+
+feedbackButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  feedbackPopup.classList.add("modal--show");
+});
+
+feedbackClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  feedbackPopup.classList.remove("modal--show");
+});
+
+
+
+
+
 ymaps.ready(init);
 function init() {
   var myMap = new ymaps.Map(document.querySelector(".contact-info__map"), {

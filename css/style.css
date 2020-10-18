@@ -57,7 +57,7 @@
   --border-social-icon-active: rgba(255, 255, 255, 0.7);
 
   --shadow-product-card: rgba(0, 0, 0, 0.2);
-
+  --fill-arrow: #ECF1EE;
 }
 
 .visually-hidden {
@@ -109,11 +109,17 @@ img {
   z-index: -10;
 }
 
+.page__body--overlay {
+  position: relative;
+}
+
 .page__body--overlay::after {
   position: absolute;
   content: "";
-  top:0;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -233,8 +239,11 @@ img {
   left: -5px;
 }
 
-.site-navigation__item:hover > .site-navigation__submenu,
-.site-navigation__item:focus > .site-navigation__submenu  {
+.site-navigation__item:hover > .site-navigation__submenu {
+  display: block;
+}
+
+.site-navigation__link:focus + .site-navigation__submenu {
   display: block;
 }
 
@@ -304,10 +313,15 @@ img {
 }
 
 .modal {
+  display: none;
   box-sizing: border-box;
   background: var(--background-modal);
   box-shadow: 0px 20px 20px var(--shadow-modal);
   border-radius: 4px;
+}
+
+.modal--show {
+  display: block;
 }
 
 .modal__input {
@@ -449,9 +463,8 @@ img {
   box-sizing: border-box;
 }
 
-.user-navigation__link--login:hover + .user-navigation__authorization-form,
-.user-navigation__link--login:focus + .user-navigation__authorization-form,
-.user-navigation__item--login:hover > .user-navigation__authorization-form {
+.user-navigation__item--login:hover > .user-navigation__authorization-form,
+.user-navigation__link--login:focus + .user-navigation__authorization-form {
   display: block;
 }
 
@@ -1507,7 +1520,7 @@ img {
   right: 16px;
   z-index: 10;
   pointer-events: none;
-  fill: #ECF1EE;
+  fill: var(--fill-arrow);
 }
 
 
