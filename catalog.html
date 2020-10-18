@@ -14,12 +14,12 @@
     <div class="container">
       <nav class="main-header__nav">
         <div class="main-header__site-navigation site-navigation">
-          <a class="site-navigation__logo" href="index.html">
+          <a class="site-navigation__logo" href="index.html" aria-label="Перейти на главную страницу">
             <img src="img/logo.svg" alt="Логотип интернет-магазина Gllacy" width="154" height="64">
           </a>
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
-              <a class="site-navigation__link site-navigation__link--current" href="#">Каталог</a>
+              <a class="site-navigation__link site-navigation__link--current" href="#" aria-haspopup="true">Каталог</a>
               <ul class="site-navigation__submenu submenu">
                 <li class="submenu__item">
                   <a class="submenu__link submenu__link--new-goods" href="#">Новинки</a>
@@ -48,7 +48,8 @@
         </div>
         <div class="main-header__user-navigation user-navigation">
           <div class="user-navigation__search-wrapper">
-            <button class="user-navigation__search-button" type="button" aria-label="Открыть форму поиска">
+            <button class="user-navigation__search-button" type="button" aria-label="Открыть форму поиска"
+              aria-haspopup="true">
               <svg class="user-navigation__search-icon" width="16" height="16" viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -64,7 +65,7 @@
 
           <ul class="user-navigation__list">
             <li class="user-navigation__item user-navigation__item--login">
-              <a class="user-navigation__link user-navigation__link--login" href="#">
+              <a class="user-navigation__link user-navigation__link--login" href="#" aria-haspopup="true">
                 <svg class="user-navigation__icon" width="20" height="19" viewBox="0 0 20 19"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" />
@@ -96,7 +97,8 @@
             </li>
 
             <li class="user-navigation__item">
-              <a class="user-navigation__link user-navigation__link--filled-cart" href="#">
+              <a class="user-navigation__link user-navigation__link--filled-cart" href="#"
+                aria-label="Показать корзину с товарами" aria-haspopup="true">
                 <svg class="user-navigation__icon" width="21" height="20" viewBox="0 0 21 20" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -173,7 +175,7 @@
   </header>
   <main>
     <div class="container">
-      <div class="breadcrumbs">
+      <div class="breadcrumbs" role="navigation" aria-label="Навигационная цепочка">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link link" href="index.html">Главная</a>
@@ -200,7 +202,8 @@
                 <option class="filters__select-option" value="expensive-first">сначала дорогие</option>
                 <option class="filters__select-option" value="fat">по жирности</option>
               </select>
-              <svg class="filters__arrow" width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" focusable="false" class="filters__arrow" width="11" height="10"
+                viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L0 0H11" />
               </svg>
             </fieldset>
@@ -231,44 +234,45 @@
                   id="from-0-to-30">
                 <label class="filters__label filters__label--fat" for="from-0-to-30">до 30%
                 </label>
-                <input class="visually-hidden filters__radio" type="radio" name="fat" value="more-30" id="more-30"">
-                <label class=" filters__label filters__label--fat" for="more-30"">выше 30%
+                <input class="visually-hidden filters__radio" type="radio" name="fat" value="more-30" id="more-30">
+                <label class=" filters__label filters__label--fat" for="more-30">выше 30%
                 </label>
               </div>
             </fieldset>
           </div>
           <div class=" filters__string">
-                <fieldset class="filters__fieldset">
-                  <legend class="filters__caption">Наполнители:</legend>
-                  <div class="filters__container filters__container--additives">
-                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="chocolate"
-                      id="chocolate" checked>
-                    <label class="filters__label filters__label--additives" for="chocolate">
-                      шоколадные
-                    </label>
-                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives"
-                      value="sugar-powders" id="sugar-powders" checked>
-                    <label class="filters__label filters__label--additives" for="sugar-powders">
-                      сахарные присыпки
-                    </label>
-                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="fruits"
-                      id="fruits">
-                    <label class="filters__label filters__label--additives" for="fruits">
-                      фрукты
-                    </label>
-                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="syrups"
-                      id="syrups">
-                    <label class="filters__label filters__label--additives" for="syrups">сиропы
-                    </label>
-                    <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="jams"
-                      id="jams">
-                    <label class="filters__label filters__label--additives" for="jams">
-                      джемы
-                    </label>
-                  </div class="filters__label-wrapper">
-                </fieldset>
-                <button class="filters__button" type="button">Применить</button>
+
+            <fieldset class=" filters__fieldset">
+              <legend class="filters__caption">Наполнители:</legend>
+              <div class="filters__container filters__container--additives">
+                <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="chocolate"
+                  id="chocolate" checked>
+                <label class="filters__label filters__label--additives" for="chocolate">
+                  шоколадные
+                </label>
+                <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="sugar-powders"
+                  id="sugar-powders" checked>
+                <label class="filters__label filters__label--additives" for="sugar-powders">
+                  сахарные присыпки
+                </label>
+                <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="fruits"
+                  id="fruits">
+                <label class="filters__label filters__label--additives" for="fruits">
+                  фрукты
+                </label>
+                <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="syrups"
+                  id="syrups">
+                <label class="filters__label filters__label--additives" for="syrups">сиропы
+                </label>
+                <input class="visually-hidden filters__checkbox" type="checkbox" name="additives" value="jams"
+                  id="jams">
+                <label class="filters__label filters__label--additives" for="jams">
+                  джемы
+                </label>
               </div>
+            </fieldset>
+            <button class="filters__button" type="button">Применить</button>
+          </div>
         </form>
       </section>
 
@@ -410,36 +414,37 @@
         </ul>
       </section>
 
-      <div class="pagination">
+      <div class="pagination" role="navigation" aria-label="Навигация по страницам">
         <ul class="pagination__list">
           <li class="pagination__item">
             <a class="pagination__link pagination__link--inactive" aria-label="Перейти на предыдущую страницу">
-              <svg class="pagination__arrow" width="7" height="12" viewBox="0 0 7 12"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" focusable="false" class="pagination__arrow" width="7" height="12"
+                viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M0.15889 6.34125L6.06761 11.8512C6.1703 11.9465 6.30937 12 6.45436 12C6.59934 12 6.73841 11.9465 6.84111 11.8512C6.89146 11.8048 6.93142 11.7495 6.95869 11.6885C6.98596 11.6276 7 11.5623 7 11.4962C7 11.4302 6.98596 11.3649 6.95869 11.304C6.93142 11.243 6.89146 11.1877 6.84111 11.1412L1.3084 6.00125L6.84111 0.831247C6.89146 0.784766 6.93142 0.729465 6.95869 0.668535C6.98596 0.607606 7 0.542253 7 0.476248C7 0.410242 6.98596 0.344889 6.95869 0.283959C6.93142 0.22303 6.89146 0.167728 6.84111 0.121247C6.73357 0.0364304 6.59506 -0.00654793 6.45436 0.00124741C6.38391 0.000448227 6.31406 0.013381 6.2493 0.0392141C6.18454 0.0650473 6.12631 0.103209 6.07835 0.151247L0.15889 5.63125C0.108543 5.67773 0.0685816 5.73303 0.0413108 5.79396C0.01404 5.85489 0 5.92024 0 5.98625C0 6.05225 0.01404 6.11761 0.0413108 6.17854C0.0685816 6.23947 0.108543 6.29477 0.15889 6.34125Z" />
               </svg>
             </a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--current">1</a>
+            <a class="pagination__link pagination__link--current" aria-label="Текущая страница 1"
+              aria-current="true">1</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">2</a>
+            <a class="pagination__link" href="#" aria-label="Перейти на страницу 2">2</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">3</a>
+            <a class="pagination__link" href="#" aria-label="Перейти на страницу 3">3</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">4</a>
+            <a class="pagination__link" href="#" aria-label="Перейти на страницу 4">4</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">5</a>
+            <a class="pagination__link" href="#" aria-label="Перейти на страницу 5">5</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#" aria-label="Перейти на следующую страницу">
-              <svg class="pagination__arrow" width="7" height="12" viewBox="0 0 7 12"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" focusable="false" class="pagination__arrow" width="7" height="12"
+                viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M6.84111 5.65875L0.932395 0.148752C0.829699 0.05349 0.690626 0 0.545642 0C0.400659 0 0.261586 0.05349 0.15889 0.148752C0.108543 0.195234 0.0685817 0.250534 0.041311 0.311464C0.0140403 0.372393 0 0.437746 0 0.503752C0 0.569758 0.0140403 0.635111 0.041311 0.69604C0.0685817 0.75697 0.108543 0.812271 0.15889 0.858752L5.6916 5.99875L0.15889 11.1688C0.108543 11.2152 0.0685817 11.2705 0.041311 11.3315C0.0140403 11.3924 0 11.4577 0 11.5238C0 11.5898 0.0140403 11.6551 0.041311 11.716C0.0685817 11.777 0.108543 11.8323 0.15889 11.8788C0.266426 11.9636 0.404942 12.0065 0.545642 11.9988C0.616091 11.9996 0.68594 11.9866 0.750698 11.9608C0.815455 11.935 0.873688 11.8968 0.921651 11.8488L6.84111 6.36875C6.89146 6.32227 6.93142 6.26697 6.95869 6.20604C6.98596 6.14511 7 6.07976 7 6.01375C7 5.94775 6.98596 5.88239 6.95869 5.82146C6.93142 5.76053 6.89146 5.70523 6.84111 5.65875Z" />
               </svg>
@@ -475,8 +480,8 @@
       <ul class="main-footer__nav-list">
         <li class="main-footer__nav-item">
           <a class="main-footer__nav-link main-footer__nav-link--provider link" href="#">
-            <svg class="main-footer__link-icon link__icon" width="15" height="13" viewBox="0 0 15 13"
-              xmlns="http://www.w3.org/2000/svg">
+            <svg aria-hidden="true" focusable="false" class="main-footer__link-icon link__icon" width="15" height="13"
+              viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z" />
             </svg>
@@ -494,7 +499,8 @@
         </li>
       </ul>
       <div class="main-footer__copyright copyright">
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss">
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss"
+          aria-label="Перейти на сайт HTML Academy">
           <img src="img/logo-htmlacacdemy.svg" alt="Логотип HTML Academy" width="108" height="39">
         </a>
         <p class="copyright__text">Сделано в

@@ -19,7 +19,7 @@
           </a>
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
-              <a class="site-navigation__link" href="#">Каталог</a>
+              <a class="site-navigation__link" href="#" aria-haspopup="true">Каталог</a>
               <ul class="site-navigation__submenu submenu">
                 <li class="submenu__item">
                   <a class="submenu__link submenu__link--new-goods" href="#">Новинки</a>
@@ -48,9 +48,10 @@
         </div>
         <div class="main-header__user-navigation user-navigation">
           <div class="user-navigation__search-wrapper">
-            <button class="user-navigation__search-button" type="button" aria-label="Открыть форму поиска">
-              <svg class="user-navigation__search-icon" width="16" height="16" viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg">
+            <button class="user-navigation__search-button" type="button" aria-label="Открыть форму поиска"
+              aria-haspopup="true">
+              <svg aria-hidden="true" focusable="false" class="user-navigation__search-icon" width="16" height="16"
+                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z" />
               </svg>
@@ -64,9 +65,9 @@
 
           <ul class="user-navigation__list">
             <li class="user-navigation__item user-navigation__item--login">
-              <a class="user-navigation__link user-navigation__link--login" href="#">
-                <svg class="user-navigation__icon" width="20" height="19" viewBox="0 0 20 19"
-                  xmlns="http://www.w3.org/2000/svg">
+              <a class="user-navigation__link user-navigation__link--login" href="#" aria-haspopup="true">
+                <svg aria-hidden="true" focusable="false" class="user-navigation__icon" width="20" height="19"
+                  viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" />
                   <path
                     d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z" />
@@ -96,8 +97,8 @@
             </li>
             <li class=" user-navigation__item">
               <a class="user-navigation__link user-navigation__link--cart" href="#">
-                <svg class="user-navigation__icon" width="21" height="20" viewBox="0 0 21 20"
-                  xmlns="http://www.w3.org/2000/svg">
+                <svg class="user-navigation__icon" aria-hidden="true" focusable="false" width="21" height="20"
+                  viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M5.70345 2L5.46161 0H0V2H3.66795L5.17946 15H19.2869L21 2H5.70345ZM17.5034 13H6.97313L5.96545 4H18.6924L17.5034 13Z" />
                   <path
@@ -280,7 +281,7 @@
           <p class="contact-info__text">Для заказов по телефону:</p>
           <a class="contact-info__telephone link--dark" href="tel:+78124502525">8 812 450-25-25</a>
           <p class="contact-info__text">(с 10 до 20 ежедневно)</p>
-          <button class="contact-info__button button" type="button">Форма обратной связи</button>
+          <button class="contact-info__button button" type="button" aria-haspopup="true">Форма обратной связи</button>
         </div>
       </div>
     </section>
@@ -311,8 +312,8 @@
       <ul class="main-footer__nav-list">
         <li class="main-footer__nav-item">
           <a class="main-footer__nav-link main-footer__nav-link--provider link" href="#">
-            <svg class="main-footer__link-icon link__icon" width="15" height="13" viewBox="0 0 15 13"
-              xmlns="http://www.w3.org/2000/svg">
+            <svg aria-hidden="true" focusable="false" class="main-footer__link-icon link__icon" width="15" height="13"
+              viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M10.8 0.00081161C10.1584 1.47209e-05 9.52561 0.149795 8.95246 0.438107C8.37931 0.726419 7.88182 1.14521 7.5 1.66081C7.11818 1.14521 6.62069 0.726419 6.04754 0.438107C5.47439 0.149795 4.84158 1.47209e-05 4.2 0.00081161C3.11401 -0.0207343 2.06346 0.387449 1.2769 1.13655C0.490337 1.88566 0.0314232 2.91507 0 4.00081C0 7.18081 7.5 13.0008 7.5 13.0008C7.5 13.0008 15 7.22081 15 4.00081C14.9686 2.91507 14.5097 1.88566 13.7231 1.13655C12.9365 0.387449 11.886 -0.0207343 10.8 0.00081161Z" />
             </svg>
@@ -330,7 +331,8 @@
         </li>
       </ul>
       <div class="main-footer__copyright copyright">
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss">
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss"
+          aria-label="Перейти на сайт HTML Academy">
           <img src="img/logo-htmlacacdemy.svg" alt="Логотип HTML Academy" width="108" height="39">
         </a>
         <p class="copyright__text">Сделано в
