@@ -322,6 +322,7 @@ img {
 
 .modal--show {
   display: block;
+  animation: bounce 0.5s;
 }
 
 .modal__input {
@@ -1695,4 +1696,13 @@ img {
 .filters__button:active {
   border: none;
   box-shadow: inset 0px 2px 1px var(----main-menu-hover-shadow);
+}
+
+@keyframes bounce {
+  0% {
+  transform: translateY(-100%);
+ }
+  100% {
+  transform: translateY(0);
+ }
 }
