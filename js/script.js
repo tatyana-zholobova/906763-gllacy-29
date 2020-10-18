@@ -3,6 +3,8 @@ const feedbackPopup = document.querySelector(".feedback");
 const feedbackClose = feedbackPopup.querySelector(".feedback__close");
 const feedbackOverlay = document.querySelector(".page__body");
 const feedbackName = feedbackPopup.querySelector(".feedback__input--name");
+const feedbackEmail = feedbackPopup.querySelector(".feedback__input--email");
+const feedbackForm = feedbackPopup.querySelector(".feedback__form");
 
 
 feedbackButton.addEventListener("click", function (evt) {
@@ -18,7 +20,9 @@ feedbackClose.addEventListener("click", function (evt) {
   feedbackOverlay.classList.remove("page__body--overlay");
 });
 
-
+feedbackForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+});
 
 
 
