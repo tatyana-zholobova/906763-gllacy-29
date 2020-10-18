@@ -2,12 +2,14 @@ const feedbackButton = document.querySelector(".contact-info__button");
 const feedbackPopup = document.querySelector(".feedback");
 const feedbackClose = feedbackPopup.querySelector(".feedback__close");
 const feedbackOverlay = document.querySelector(".page__body");
+const feedbackName = feedbackPopup.querySelector(".feedback__input--name");
 
 
 feedbackButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.add("modal--show");
   feedbackOverlay.classList.add("page__body--overlay");
+  feedbackName.focus();
 });
 
 feedbackClose.addEventListener("click", function (evt) {
