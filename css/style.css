@@ -537,7 +537,6 @@ img {
 
 .slider {
   position: relative;
-  z-index: -1;
 }
 
 .slider__item {
@@ -639,6 +638,11 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 26px;
+}
+
+.banners {
+  position: relative;
+  z-index: 1;
 }
 
 .banner {

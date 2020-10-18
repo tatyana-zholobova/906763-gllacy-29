@@ -60,6 +60,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+
 ymaps.ready(init);
 function init() {
   var myMap = new ymaps.Map(document.querySelector(".contact-info__map"), {
@@ -73,4 +74,47 @@ function init() {
     iconImageOffset: [-40, -140]
   });
   myMap.geoObjects.add(myPlacemark);
-}
+};
+
+const sliderItems = document.querySelectorAll(".slider__item");
+const sliderButtons = document.querySelectorAll(".slider__button");
+
+sliderButtons[0].addEventListener("click", function (evt) {
+  evt.preventDefault();
+  page.classList.remove("page__body--grey");
+  page.classList.remove("page__body--brown");
+  page.classList.add("page__body--green");
+  sliderItems[0].classList.add("slider__item--current");
+  sliderItems[1].classList.remove("slider__item--current");
+  sliderItems[2].classList.remove("slider__item--current");
+  sliderButtons[0].classList.add("slider__button--current");
+  sliderButtons[1].classList.remove("slider__button--current");
+  sliderButtons[2].classList.remove("slider__button--current");
+
+});
+
+sliderButtons[1].addEventListener("click", function (evt) {
+  evt.preventDefault();
+  page.classList.remove("page__body--green");
+  page.classList.remove("page__body--brown");
+  page.classList.add("page__body--grey");
+  sliderItems[1].classList.add("slider__item--current");
+  sliderItems[0].classList.remove("slider__item--current");
+  sliderItems[2].classList.remove("slider__item--current");
+  sliderButtons[1].classList.add("slider__button--current");
+  sliderButtons[0].classList.remove("slider__button--current");
+  sliderButtons[2].classList.remove("slider__button--current");
+});
+
+sliderButtons[2].addEventListener("click", function (evt) {
+  evt.preventDefault();
+  page.classList.remove("page__body--green");
+  page.classList.remove("page__body--grey");
+  page.classList.add("page__body--brown");
+  sliderItems[2].classList.add("slider__item--current");
+  sliderItems[0].classList.remove("slider__item--current");
+  sliderItems[1].classList.remove("slider__item--current");
+  sliderButtons[2].classList.add("slider__button--current");
+  sliderButtons[0].classList.remove("slider__button--current");
+  sliderButtons[1].classList.remove("slider__button--current");
+});
