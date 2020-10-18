@@ -4,8 +4,8 @@ const feedbackClose = feedbackPopup.querySelector(".feedback__close");
 const feedbackOverlay = document.querySelector(".page__body");
 const feedbackName = feedbackPopup.querySelector(".feedback__input--name");
 const feedbackEmail = feedbackPopup.querySelector(".feedback__input--email");
+const feedbackMessage = feedbackPopup.querySelector(".feedback__message");
 const feedbackForm = feedbackPopup.querySelector(".feedback__form");
-
 
 feedbackButton.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -21,9 +21,10 @@ feedbackClose.addEventListener("click", function (evt) {
 });
 
 feedbackForm.addEventListener("submit", function (evt) {
-  evt.preventDefault();
+  if (!feedbackName.value || !feedbackEmail.value || !feedbackMessage.value) {
+    evt.preventDefault();
+  }
 });
-
 
 
 ymaps.ready(init);
