@@ -1574,6 +1574,34 @@ img {
 }
 
 
+.filters__price-wrapper {
+  display: flex;
+  align-items: top;
+}
+
+.filters__price {
+  width: 25px;
+  height: 16px;
+  color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+.filters__price-units {
+  padding-top: 1px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filters__price::placeholder {
+  opacity: 1;
+}
+
+
 .filters__range {
   width: 218px;
   height: 36px;

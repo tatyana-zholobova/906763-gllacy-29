@@ -208,7 +208,19 @@
               </svg>
             </fieldset>
             <fieldset class="filters__fieldset">
-              <legend class="filters__caption">Цена: 100 ₽ – 500 ₽</legend>
+              <div class="filters__price-wrapper">
+                <legend class="filters__caption">Цена:</legend>
+                <label for="min-price">
+                  <span class="visually-hidden">Минимальная цена</span>
+                </label>
+                <input class="filters__price" type="text" name="min-price" id="min-price" value="100" placeholder="100">
+                <span class="filters__price-units"> ₽ – </span>
+                <label for="max-price">
+                  <span class="visually-hidden">Максимальна яцена</span>
+                </label>
+                <input class="filters__price" type="text" name="max-price" id="max-price" value="500" placeholder="500">
+                <span class="filters__price-units"> ₽</span>
+              </div>
               <div class="filters__range">
                 <div class="filters__controls">
                   <div class="filters__scale">
