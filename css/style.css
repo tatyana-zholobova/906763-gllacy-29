@@ -1155,8 +1155,8 @@ img {
   top: 338px;
   left: 50%;
   z-index: 200;
-  margin-left: -169px;
-  padding-top: 12px;
+  margin-left: -239px;
+  padding-top: 14px;
   padding-right: 25px;
   padding-bottom: 27px;
   padding-left: 24px;
@@ -1166,10 +1166,9 @@ img {
   border-radius: 6px;
 }
 
-
 .feedback__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
@@ -1186,7 +1185,7 @@ img {
   width: 428px;
   height: 154px;
   padding: 12px 14px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .feedback__button {
