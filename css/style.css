@@ -1696,7 +1696,19 @@ img {
   height: 22px;
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
+  opacity: 0.8;
 }
+
+.filters__label--fat:hover::before,
+.filters__label--additives:hover::before {
+  opacity: 1;
+}
+
+.filters__radio:disabled + .filters__label::before,
+.filters__checkbox:disabled + .filters__label::before {
+  opacity: 0.4;
+}
+
 
 .filters__radio:focus + .filters__label::before {
   outline: thin dotted;
@@ -1732,7 +1744,10 @@ img {
   height: 20px;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
+  opacity: 0.8;
 }
+
+
 
 .filters__checkbox:focus + .filters__label::before {
   outline: thin dotted;
