@@ -241,7 +241,7 @@ img {
 
 .site-navigation__submenu {
   position: absolute;
-  z-index: 2;
+  z-index: 30;
   top: 50px;
   left: -5px;
   display: none;
@@ -686,13 +686,13 @@ img {
 }
 
 .banner--raspberry {
-  background-image: url(../img/background-raspberry.jpg);
+  background-image: url(../img/background_raspberry.jpg);
   background-repeat: no-repeat;
   background-color: var(--background-raspberry);
 }
 
 .banner--chocolate {
-  background-image: url(../img/background-chocolate.jpg);
+  background-image: url(../img/background_chocolate.jpg);
   background-repeat: no-repeat;
   background-color: var(--background-chocolate);
 }
@@ -849,7 +849,7 @@ img {
   padding-bottom: 30px;
   padding-left: 20px;
   color: var(--black-text);
-  background-image: url(../img/pattern-wafer.jpg);
+  background-image: url(../img/pattern_wafer.jpg);
   background-repeat: repeat;
   background-color: var(--background-waffle);
   border-radius: 16px;
@@ -888,19 +888,19 @@ img {
 }
 
 .advantages__item--own-production::before {
-  background-image: url(../img/icon-icecream.svg);
+  background-image: url(../img/icon_icecream.svg);
 }
 
 .advantages__item--farms::before {
-  background-image: url(../img/icon-cow.svg);
+  background-image: url(../img/icon_cow.svg);
 }
 
 .advantages__item--naturalness::before {
-  background-image: url(../img/icon-leaf.svg);
+  background-image: url(../img/icon_leaf.svg);
 }
 
 .advantages__item--temperature::before {
-  background-image: url(../img/icon-thermometer.svg);
+  background-image: url(../img/icon_thermometer.svg);
 }
 
 .article {
@@ -909,7 +909,7 @@ img {
   padding-bottom: 20px;
   padding-left: 20px;
   color: var(--black-text);
-  background-image: url(../img/background-article.jpg);
+  background-image: url(../img/background_article.jpg);
   background-repeat: no-repeat;
   background-color: var(--basic-white);
   border-radius: 16px;
@@ -1097,7 +1097,7 @@ img {
   background-image: url(../img/facebook.svg);
 }
 .socials__link--vk::before {
-  background-image: url(../img/vk.svg);
+  background-image: url(../img/vkontakte.svg);
 }
 
 .socials__link--instagram::before {
@@ -1700,7 +1700,7 @@ img {
   top: -2px;
   width: 22px;
   height: 22px;
-  background-image: url(../img/radio-off.svg);
+  background-image: url(../img/radio_off.svg);
   background-repeat: no-repeat;
   opacity: 0.8;
 }
@@ -1711,7 +1711,7 @@ img {
 }
 
 .filters__radio:checked + .filters__label--fat::before {
-  background-image: url(../img/radio-on.svg);
+  background-image: url(../img/radio_on.svg);
   background-repeat: no-repeat;
 }
 
@@ -1753,7 +1753,7 @@ img {
   top: -1px;
   width: 20px;
   height: 20px;
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url(../img/checkbox_off.svg);
   background-repeat: no-repeat;
   opacity: 0.8;
 }
@@ -1761,7 +1761,7 @@ img {
 .filters__checkbox:checked + .filters__label--additives::before {
   width: 24px;
   height: 20px;
-  background-image: url(../img/checkbox-on.svg);
+  background-image: url(../img/checkbox_on.svg);
 }
 
 .filters__button {
